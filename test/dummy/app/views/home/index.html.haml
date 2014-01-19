@@ -1,0 +1,5 @@
+.row
+  .col-md-12
+    = awesome_form_for DummyModel.new, url: '#', method: :get do |form|
+      = form.inputs
+      = form.actions :cancel, :reset, :submit

@@ -1,0 +1,15 @@
+:ruby
+  cls = case action
+  when :submit then 'btn-success'
+  when :cancel then 'btn-danger'
+  when :reset then 'btn-default'
+  else 'btn-primary'
+  end
+
+  attrs = {
+    type: action,
+    name: name,
+    class: "#{cls} #{builder.model_name} #{action}",
+  }
+
+%button.btn{attrs}= builder.action_label(action)
